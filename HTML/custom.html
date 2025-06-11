@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #l{
+            color: chocolate;
+        }
+    </style>
+<head>
+    <title>test</title>
+</head>
+<body>
+    <form>
+    <input type="text" id="t" placeholder="Enter your name" required>
+    <label id="l">
+        *
+    </label>
+    <input type="submit" value="submit" onclick="clickSubmit()">
+    </form>
+    <script>
+    document.getElementById("l").style="display:none";
+    function clickSubmit(){
+        let username = document.getElementById("t").value;
+        if(username ==""){
+            document.getElementById("l").style="display:block";
+        }
+        else{
+            alert("User name is entered");
+            document.getElementById("l").style="display:none";
+        }
+    }
+    </script>
+</body>
+</html>
