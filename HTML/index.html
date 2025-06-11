@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Test</title>
+        <style>
+            #re{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+        <input type="text" id="username" placeholder="Enter your name.." required>
+        <label id="re">*</label>
+        <input type="submit" value="Submit" onclick="submitForm()">
+</form>
+        <script>
+            
+            document.getElementById("re").style="display:none";
+
+            function submitForm(){
+                let username= document.getElementById("username").value;
+                if(username ==""){
+                    document.getElementById("re").style="display:block";
+                }
+                else{
+                    alert(username);
+                    console.log(username);
+                    document.getElementById("re").style="display:none";
+                }
+            }
+        </script>
+    </body>
+</html>
